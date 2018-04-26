@@ -1,17 +1,17 @@
 const Discord = require('discord.js');
-const Client = new Discord.Client();
+const bot = new Discord.Client();
 
 var prefix = ("*")
 
-Client.on('ready', function() {
-    Client.user.setGame("Command: *help [En Cours de devplopement]");
+bot.on('ready', function() {
+    bot.user.setGame("Command: *help [En Cours de devplopement]");
     console.log("Connected");
 });
 
-Client.login("process.env.TOKEN");
+bot.login(process.env.TOKEN);
 
 
-Client.on('message', message => {
+bot.on('message', message => {
     if (message,content === prefix + "help"){
         message.channel.sendMessage("Liste des commande: /n -*help");
     }
