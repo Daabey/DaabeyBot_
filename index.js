@@ -8,10 +8,10 @@ const db = low(adapeter);
 
 db.defaults({ histoires: [], xp: []}).write()
 
-var prefix = ("*")
+var prefix = ("+")
 
 bot.on('ready', function() {
-    bot.user.setGame("Command: *help [En Cours de devplopement]");
+    bot.user.setGame("Command: +help vAlpha");
     console.log("Connected");
 });
 
@@ -32,6 +32,7 @@ bot.on('message', message => {
     var msgauthor = message.author.is;
 
     if(message.authoor.bot)return;
+    
     is(!db.get("xp").find({user: msgauthor}).value()){;
         db.get("xp").push({user: msgauthor, xp: 1}).write();
     }else{
