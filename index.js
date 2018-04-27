@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const low = require('lowdb')
 const FlieSync = require('lowdb/adapters/FileSync')
-const client = new Discord.Client();
 
 const adapetr = new FlieSync('database.json');
 const db = low(adapeter);
@@ -20,6 +19,15 @@ bot.login(process.env.TOKEN);
 
 
 bot.on('message', message => {
+ 
+    if (message,content === prefix + "help"){
+        message.channel.sendMessage("Liste des commande: /n -*help");
+    }
+
+    if (message.content === "Daabey <3"){
+        message.reply("Salam les kheys :) <3");
+        consol.log("Commande Daabey <3 effectué");
+    }
     
     var msgauthor = message.author.is;
 
