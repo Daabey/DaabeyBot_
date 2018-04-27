@@ -33,7 +33,7 @@ bot.on('message', message => {
 
     if(message.author.bot)return;
     
-    is(!db.get("xp").find({user: msgauthor}).value()){
+    if(!db.get("xp").find({user: msgauthor}).value()){
         db.get("xp").push({user: msgauthor, xp: 1}).write();
     }else{
         var userxpdb = db.get("xp").filter({user: msgauthor}).find('xp').value();
