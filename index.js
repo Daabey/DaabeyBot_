@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const low = require('lowdb')
@@ -11,7 +12,7 @@ db.defaults({ histoires: [], xp: []}).write()
 var prefix = ("+")
 
 bot.on('ready', function() {
-    bot.user.setGame("Command: +help vAlpha");
+    bot.user.setGame("9liliwi.Bot is here bae dir +help ila b4ti lcommandes"); 
     console.log("Connected");
 });
 
@@ -21,7 +22,15 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
  
     if (message,content === prefix + "help"){
-        message.channel.sendMessage("Liste des commande: /n -*help");
+        var help_embed = new Discord.RichEmbed()
+            .setTitle(`Iwa a si ${message.author.username} les commandes homa`)
+            .setColor('#F4D03F')
+            .setDescription("7aliyan 7it lbot ba9i a Version Alpha kayna commande w7da o li hia ")
+            .addField(prefix,"+xp:had cmd tate wrik l xp o niveau dyalk ")
+            .addField(prefix,"hsdfsfsfsdf")
+            .setFooter("Enjoy :p Daabey <3")
+        message.channel.send({embed: help_embed});   
+    
     }
 
     if (message.content === "Daabey <3"){
