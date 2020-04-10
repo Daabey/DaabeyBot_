@@ -12,7 +12,7 @@ db.defaults({ histoires: [], xp: []}).write()
 var prefix = ("+")
 
 bot.on('ready', function() {
-    bot.user.setGame("9liliwi.Bot is here bae dir +help ila b4ti lcommandes"); 
+    bot.user.setGame("TheLastCityRp"); 
     console.log("Connected");
 });
 
@@ -26,16 +26,16 @@ bot.on('message', message => {
             .setTitle(`Iwa a si ${message.author.username} les commandes homa`)
             .setColor('#F4D03F')
             .setDescription("7aliyan 7it lbot ba9i a Version Alpha kayna commande w7da o li hia ")
-            .addField(prefix,"+xp:had cmd tate wrik l xp o niveau dyalk ")
-            .addField(prefix,"hsdfsfsfsdf")
-            .setFooter("Enjoy :p Daabey <3")
+            .addField(prefix,"Soon!")
+            .addField(prefix,"Soon!")
+            .setFooter("Enjoy :p xTrash._. <3")
         message.channel.send({embed: help_embed});   
     
     }
 
-    if (message.content === "Daabey <3"){
-        message.reply("Salam les kheys :) <3");
-        consol.log("Commande Daabey <3 effectué");
+    if (message.content === prefix + "Ip"){
+        message.reply("The Last City RolePlay : Not Yet ");
+        consol.log("TLCRP");
     }
     
     var msgauthor = message.author.is;
